@@ -1,0 +1,23 @@
+# 运行环境
+.venv/
+__pycache__/
+*.pyc
+# 运行数据与敏感数据（消息归档、上下文、经济库、配额、登录二维码、日志、语音/图片临时文件…）
+data/*
+!data/*.example.json
+poller.pid
+*.log
+*.tmp
+# 密钥 / 配置（中转 secret 等）
+.relay_config.json
+.env
+*.env
+*secret*
+*token*
+*.key
+*.pem
+bot.env
+!*.example
+!.env.example
+!bot.env.example
+.relay_config.json.bak*

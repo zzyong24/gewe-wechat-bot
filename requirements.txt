@@ -1,0 +1,7 @@
+requests>=2.31
+flask>=3.0
+pillow>=10
+pypinyin>=0.50
+silk-python>=0.2.8
+lunardate>=0.2
+chinesecalendar>=1.9

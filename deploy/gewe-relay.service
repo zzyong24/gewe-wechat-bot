@@ -1,0 +1,18 @@
+[Unit]
+Description=gewe callback relay
+After=network.target
+
+[Service]
+# 中转服务器（有公网 IP，gewe 回调打到这里）。secret 二选一：
+#   /etc/gewe-relay.env 里写 RELAY_SECRET=...（chmod 600），或 relay/ 目录下放 .secret（一行随机串，chmod 600）
+EnvironmentFile=-/etc/gewe-relay.env
+User=gewebot
+Group=gewebot
+WorkingDirectory=/opt/gewe-wechat-bot
+Environment=RELAY_DB=/opt/gewe-wechat-bot/data/queue.db RELAY_IMG_DIR=/opt/gewe-wechat-bot/data/img
+ExecStart=/opt/gewe-wechat-bot/.venv/bin/python relay/relay.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

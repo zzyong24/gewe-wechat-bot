@@ -1,0 +1,22 @@
+[Unit]
+Description=gewe-wechat-bot poller
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# 建议用普通用户跑：useradd -r -s /usr/sbin/nologin gewebot && chown -R gewebot: /opt/gewe-wechat-bot
+# 用 root 跑的话 data/ 下新写的文件都会变成 root 所有，之后换普通用户跑会读写失败。
+User=gewebot
+Group=gewebot
+WorkingDirectory=/opt/gewe-wechat-bot
+EnvironmentFile=/etc/gewe-wechat-bot.env
+ExecStart=/opt/gewe-wechat-bot/.venv/bin/python poller.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/opt/gewe-wechat-bot/data/poller.stdout
+StandardError=append:/opt/gewe-wechat-bot/data/poller.stdout
+Nice=5
+
+[Install]
+WantedBy=multi-user.target

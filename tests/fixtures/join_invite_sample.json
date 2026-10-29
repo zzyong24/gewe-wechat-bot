@@ -1,0 +1,27 @@
+{
+ "Wxid": "wxid_bot_demo",
+ "TypeName": "AddMsg",
+ "Appid": "wx_demo_appid",
+ "Data": {
+  "MsgId": 100000001,
+  "FromUserName": {
+   "string": "20000000002@chatroom"
+  },
+  "ToUserName": {
+   "string": "wxid_bot_demo"
+  },
+  "MsgType": 10002,
+  "Content": {
+   "string": "20000000002@chatroom:\n<sysmsg type=\"sysmsgtemplate\">\n\t<sysmsgtemplate>\n\t\t<content_template type=\"tmpl_type_profile\">\n\t\t\t<plain><![CDATA[]]></plain>\n\t\t\t<template><![CDATA[\"$username$\"邀请你和\"$names$\"加入了群聊]]></template>\n\t\t\t<link_list>\n\t\t\t\t<link name=\"username\" type=\"link_profile\">\n\t\t\t\t\t<memberlist>\n\t\t\t\t\t\t<member>\n\t\t\t\t\t\t\t<username><![CDATA[wxid_owner_demo]]></username>\n\t\t\t\t\t\t\t<nickname><![CDATA[群主]]></nickname>\n\t\t\t\t\t\t</member>\n\t\t\t\t\t</memberlist>\n\t\t\t\t</link>\n\t\t\t\t<link name=\"names\" type=\"link_profile\">\n\t\t\t\t\t<memberlist>\n\t\t\t\t\t\t<member>\n\t\t\t\t\t\t\t<username><![CDATA[wxid_newbie]]></username>\n\t\t\t\t\t\t\t<nickname><![CDATA[群友小A]]></nickname>\n\t\t\t\t\t\t</member>\n\t\t\t\t\t</memberlist>\n\t\t\t\t\t<separator><![CDATA[、]]></separator>\n\t\t\t\t</link>\n\t\t\t</link_list>\n\t\t</content_template>\n\t</sysmsgtemplate>\n</sysmsg>\n"
+  },
+  "Status": 4,
+  "ImgStatus": 1,
+  "ImgBuf": {
+   "iLen": 0
+  },
+  "CreateTime": 1792400000,
+  "MsgSource": "<msgsource></msgsource>",
+  "NewMsgId": 1000000000000000001,
+  "MsgSeq": 1
+ }
+}

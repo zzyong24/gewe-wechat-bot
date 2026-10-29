@@ -1,0 +1,10 @@
+{
+  "_说明": "观察群：只收集不发言（发送闸硬拦）。allow_send=true 的群例外，但仍要在 BOT_SEND_ALLOW 里，并受 send_policy 约束。",
+  "rooms": {
+    "20000000003@chatroom": {
+      "name": "示例大群",
+      "allow_send": true,
+      "send_policy": {"daily_reply_cap": 60, "user_cooldown_sec": 60, "followup": "owner_only"}
+    }
+  }
+}

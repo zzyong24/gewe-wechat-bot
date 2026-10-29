@@ -1,0 +1,5 @@
+{
+  "server_url": "https://relay.example.com",
+  "secret": "replace-with-a-long-random-string",
+  "last_pulled_id": 0
+}
